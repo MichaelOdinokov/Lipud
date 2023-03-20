@@ -18,9 +18,9 @@ tahvel.create_polygon(30,160,  300,160,  300,200,  60,200, fill="black")
 tahvel.create_rectangle(360,130, 180,99, fill="#42cef5")
 
 #France
-tahvel.create_rectangle(5,5, 180,45, fill="bluen")
-tahvel.create_rectangle(5,45, 180,99, fill="white")
-tahvel.create_rectangle(5,135, 180,99, fill="red")
+tahvel.create_rectangle(500,5, 180,45, fill="blue")
+tahvel.create_rectangle(500,45, 180,99, fill="white")
+tahvel.create_rectangle(500,135, 180,99, fill="red")
 
 
 tahvel.grid()
