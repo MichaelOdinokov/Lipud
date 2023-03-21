@@ -26,11 +26,13 @@ tahvel.create_rectangle(5,130,  180,90,fill="#4599a1")
 tahvel.create_polygon(5,5,  100,60,  5,130,  5,4, width=5,fill="black")
 
 #Valgusfor
-tahvel.create_rectangle(100,410,  135,375,fill="red")
-tahvel.create_rectangle(100,415,  135,450,fill="yellow")
-tahvel.create_rectangle(100,455,  135,490,fill="green")
-tahvel.create_line(30, 600, 300, 600, width=4, fill="black")
-tahvel.create_line(3, 500, 30, 500, width=4, fill="black")
+tahvel.create_line(100, 410, 135, 375, width=45, fill="red")
+tahvel.create_line(100, 415, 135, 450, width=4, fill="yellow")
+tahvel.create_line(100, 455, 135, 490, width=4, fill="green")
+tahvel.create_rectangle(110, 490, 130, 660, fill="black", outline="black")
+tahvel.create_rectangle(40, 580, 200, 620, fill="black", outline="black")
+
+
 
 #Harjutus. Muster
 
