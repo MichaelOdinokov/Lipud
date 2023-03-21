@@ -1,4 +1,6 @@
 ﻿from tkinter import *
+from math import*
+
 from tkinter import font # vajalik teksti fondi muutmiseks
 
 raam = Tk()
@@ -31,27 +33,25 @@ tahvel.create_line(30, 600, 300, 600, width=4, fill="black")
 tahvel.create_line(3, 500, 30, 500, width=4, fill="black")
 
 #Harjutus. Muster
-k=7
-x0=0
-y0=0
-x1=550
-y1=550
 
-for i in range(k):
-    x0+=35
-    y0+=35
-    x1-=35
-    y1-=35
+x0=400
+y0=400
+x1=600
+y1=600
+a=100
+r=(a**2+a**2)**(1/2)
+p=(a-r)
+
+for i in range(12):
+    x0+=p
+    y0+=p
+    x1-=p
+    y1-=p
     tahvel.create_rectangle(x0,y0,x1,y1,width=1, outline="blue", fill="red")
     tahvel.create_oval(x0,y0,x1,y1,width=1, outline="blue", fill="yellow")
-
-
-
-x0=10
-y0=10
-x1=10
-y1=10
-tahvel.create_rectangle(x0,y0,x1,y1,width=1, outline="black", fill="white")
+    p=r-a
+    r=r-p
+    a=((r)*sqrt(2))/2
 
 tahvel.grid()
 raam.mainloop()
