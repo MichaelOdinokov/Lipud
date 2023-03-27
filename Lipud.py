@@ -7,7 +7,7 @@ aken = Tk()
 aken.title("Tahvel")
 tahvel = Canvas(aken, width=600, height=600, background="white")
 
-def valik():
+def valik():# Vigade expected floating-point number but got "2383169571200muster1"
     val1=var.get()
     val2=var.get()  
     if val1!="-": val1.insert(END, val1)
@@ -56,8 +56,6 @@ def muster1():
         p=r-a
         r=r-p
         a=((r)*sqrt(2))/2
-
-    
 
 
 var=IntVar() # StringVar()

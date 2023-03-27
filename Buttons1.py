@@ -32,7 +32,7 @@ var2=StringVar()
 var3=StringVar()
 c1=Checkbutton(aken,text="Esimene",variable=var1,onvalue="Esimene",offvalue="-",command=valik_2)
 c2=Checkbutton(aken,text="Teine",variable=var2,onvalue="Teine",offvalue="--",command=valik_2)
-c3=Checkbutton(aken,text="Kolmas",variable=var3,onvalue="Kolmas",offvalue="---",command=valik_2)
+c3=Checkbutton(aken,text="Kolmas",variable=var3,onvalue="Kolmas",offvalue="---",command=valik_2) 
 
 
 
