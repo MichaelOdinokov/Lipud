@@ -1,4 +1,4 @@
-﻿from ctypes.wintypes import FLOAT
+﻿
 from tkinter import *
 from math import*
 from tkinter import font # vajalik teksti fondi muutmiseks
@@ -26,12 +26,12 @@ def Bahama():
     tahvel.create_polygon(5,5,  100,60,  5,130,  5,4, width=5,fill="black")
 
 def valgusfor():
-    tahvel.create_rectangle(100, 375, 145, 420, width=1, outline="black", fill="red")
-    tahvel.create_rectangle(100, 450, 145, 495, width=1, outline="black", fill="green")
-    tahvel.create_rectangle(100, 525, 145, 570, width=1, outline="black", fill="yellow")
-    tahvel.create_rectangle(110, 490, 130, 660, fill="black")
-    tahvel.create_rectangle(40, 580, 200, 620, fill="black")
-
+    tahvel.create_text(90, 360, text="Valgusfoor", anchor=SW)
+    tahvel.create_rectangle(100,410,  130,370, fill="red", outline="black")
+    tahvel.create_rectangle(100,410,  130,450, fill="yellow", outline="black")    
+    tahvel.create_rectangle(100,450,  130,490, fill="green", outline="black")
+    tahvel.create_line(115, 490, 115, 520, fill="black", width=5)
+    tahvel.create_line(90, 520, 145, 520, fill="black", width=5)
 
 def muster1():
     x0=400
@@ -68,5 +68,7 @@ r3.grid(row=3,column=0)
 r4.grid(row=4,column=0)
 r5.grid(row=5,column=0)
 
+
 tahvel.grid()
+
 aken.mainloop()
