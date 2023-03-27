@@ -1,4 +1,5 @@
-﻿from tkinter import *
+﻿from ctypes.wintypes import FLOAT
+from tkinter import *
 from math import*
 from tkinter import font # vajalik teksti fondi muutmiseks
 
@@ -7,8 +8,8 @@ aken.title("Tahvel")
 tahvel = Canvas(aken, width=600, height=600, background="white")
 
 def valik():
-    val1=float(var.get())
-    val2=float(var.get())    
+    val1=var.get()
+    val2=var.get()  
     if val1!="-": val1.insert(END, val1)
     if val2!="--":val2.insert(END, val2)
    
@@ -59,7 +60,7 @@ def muster1():
     
 
 
-var=IntVar() # StringVar()
+var=FLOAT() # StringVar()
 r1=Radiobutton(aken, text="Valgusfor",variable=var, value=valgusfor,command=valik) # variable=var svjazali, znachenija var=1
 r2=Radiobutton(aken, text="Muster1",variable=var, value=muster1,command=valik) # variable=var svjazali, znachenija var=2
 r3=Radiobutton(aken, text="Eesti",variable=var, value=Eesti,command=valik) # variable=var svjazali, znachenija var=2
