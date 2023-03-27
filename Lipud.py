@@ -60,7 +60,7 @@ def muster1():
     
 
 
-var=FLOAT() # StringVar()
+var=IntVar() # StringVar()
 r1=Radiobutton(aken, text="Valgusfor",variable=var, value=valgusfor,command=valik) # variable=var svjazali, znachenija var=1
 r2=Radiobutton(aken, text="Muster1",variable=var, value=muster1,command=valik) # variable=var svjazali, znachenija var=2
 r3=Radiobutton(aken, text="Eesti",variable=var, value=Eesti,command=valik) # variable=var svjazali, znachenija var=2
