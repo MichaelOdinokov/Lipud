@@ -7,17 +7,12 @@ aken = Tk()
 aken.title("Tahvel")
 tahvel = Canvas(aken, width=600, height=600, background="white")
 
-def valik():# Vigade expected floating-point number but got "2383169571200muster1"
-    val1=var.get()
-    val2=var.get()  
-    if val1!="-": val1.insert(END, val1)
-    if val2!="--":val2.insert(END, val2)
    
 
 def Germany():
-    tahvel.create_rectangle(960,5, 180,45, fill="black")
-    tahvel.create_rectangle(960,45, 180,99, fill="red")
-    tahvel.create_rectangle(960,135, 180,99, fill="yellow")
+    tahvel.create_rectangle(660,5, 180,45, fill="black")
+    tahvel.create_rectangle(660,45, 180,99, fill="red")
+    tahvel.create_rectangle(660,135, 180,99, fill="yellow")
 
 def Eesti():
     tahvel.create_rectangle(360,5, 180,45, fill="blue")
@@ -31,11 +26,12 @@ def Bahama():
     tahvel.create_polygon(5,5,  100,60,  5,130,  5,4, width=5,fill="black")
 
 def valgusfor():
-    tahvel.create_line(100, 410, 135, 375, width=45, fill="red")
-    tahvel.create_line(100, 415, 135, 450, width=45, fill="yellow")
-    tahvel.create_line(100, 455, 135, 490, width=45, fill="green")
+    tahvel.create_rectangle(100, 375, 145, 420, width=1, outline="black", fill="red")
+    tahvel.create_rectangle(100, 450, 145, 495, width=1, outline="black", fill="green")
+    tahvel.create_rectangle(100, 525, 145, 570, width=1, outline="black", fill="yellow")
     tahvel.create_rectangle(110, 490, 130, 660, fill="black")
     tahvel.create_rectangle(40, 580, 200, 620, fill="black")
+
 
 def muster1():
     x0=400
@@ -58,12 +54,12 @@ def muster1():
         a=((r)*sqrt(2))/2
 
 
-var=IntVar() # StringVar()
-r1=Radiobutton(aken, text="Valgusfor",variable=var, value=valgusfor,command=valik) # variable=var svjazali, znachenija var=1
-r2=Radiobutton(aken, text="Muster1",variable=var, value=muster1,command=valik) # variable=var svjazali, znachenija var=2
-r3=Radiobutton(aken, text="Eesti",variable=var, value=Eesti,command=valik) # variable=var svjazali, znachenija var=2
-r4=Radiobutton(aken, text="Germany",variable=var, value=Germany,command=valik) # variable=var svjazali, znachenija var=2
-r5=Radiobutton(aken, text="Bahama",variable=var, value=Bahama,command=valik) # variable=var svjazali, znachenija var=2
+ # StringVar()
+r1=Radiobutton(aken, text="Valgusfor",variable=IntVar, value=1,command=valgusfor) 
+r2=Radiobutton(aken, text="Muster1",variable=IntVar, value=2,command=muster1) 
+r3=Radiobutton(aken, text="Eesti",variable=IntVar, value=3,command=Eesti) 
+r4=Radiobutton(aken, text="Germany",variable=IntVar, value=4,command=Germany) 
+r5=Radiobutton(aken, text="Bahama",variable=IntVar, value=5,command=Bahama) 
 
 
 r1.grid(row=1,column=0)
@@ -71,10 +67,6 @@ r2.grid(row=2,column=0)
 r3.grid(row=3,column=0)
 r4.grid(row=4,column=0)
 r5.grid(row=5,column=0)
-
-
-
-
 
 tahvel.grid()
 aken.mainloop()
