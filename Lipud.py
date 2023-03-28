@@ -26,12 +26,13 @@ def Bahama():
     tahvel.create_polygon(5,5,  100,60,  5,130,  5,4, width=5,fill="black")
 
 def valgusfor():
-    tahvel.create_text(90, 360, text="Valgusfoor", anchor=SW)
-    tahvel.create_rectangle(100,410,  130,370, fill="red", outline="black")
-    tahvel.create_rectangle(100,410,  130,450, fill="yellow", outline="black")    
-    tahvel.create_rectangle(100,450,  130,490, fill="green", outline="black")
-    tahvel.create_line(115, 490, 115, 520, fill="black", width=5)
-    tahvel.create_line(90, 520, 145, 520, fill="black", width=5)
+    tahvel.create_rectangle(80, 160, 160, 450, fill="grey")
+    tahvel.create_text(90, 190, text="Valgusfoor", anchor=SW)
+    tahvel.create_rectangle(100,290,  130,250, fill="red", outline="black")
+    tahvel.create_rectangle(100,290,  130,330, fill="yellow", outline="black")    
+    tahvel.create_rectangle(100,330,  130,370, fill="green", outline="black")
+    tahvel.create_line(115, 370, 115, 400, fill="black", width=5)
+    tahvel.create_line(90, 400, 145, 400, fill="black", width=5) 
 
 def muster1():
     x0=400
